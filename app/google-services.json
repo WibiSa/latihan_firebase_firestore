@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "123265746876",
+    "firebase_url": "https://latihan-firebase-app.firebaseio.com",
+    "project_id": "latihan-firebase-app",
+    "storage_bucket": "latihan-firebase-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123265746876:android:9ace564d7aad9126f1cdb9",
+        "android_client_info": {
+          "package_name": "com.wibisa.latihanfirebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123265746876-5j1tqk0cobhkp9ask8psrnk8aauosq4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIlMpqj3ut0EWbHgb4uOOuJT37BEfSkJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123265746876-5j1tqk0cobhkp9ask8psrnk8aauosq4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123265746876:android:241bddff6501a9b5f1cdb9",
+        "android_client_info": {
+          "package_name": "com.wibisa.lffirestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123265746876-5j1tqk0cobhkp9ask8psrnk8aauosq4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIlMpqj3ut0EWbHgb4uOOuJT37BEfSkJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123265746876-5j1tqk0cobhkp9ask8psrnk8aauosq4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123265746876:android:1d6cd96dba97a92cf1cdb9",
+        "android_client_info": {
+          "package_name": "com.wibisa.lflogingoogle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123265746876-bg0gmt7t65eo9o76med9aeflfmsq3qul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wibisa.lflogingoogle",
+            "certificate_hash": "dddf8b449eaf09e058dffd304fc322fdcbfec513"
+          }
+        },
+        {
+          "client_id": "123265746876-5j1tqk0cobhkp9ask8psrnk8aauosq4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIlMpqj3ut0EWbHgb4uOOuJT37BEfSkJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123265746876-5j1tqk0cobhkp9ask8psrnk8aauosq4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

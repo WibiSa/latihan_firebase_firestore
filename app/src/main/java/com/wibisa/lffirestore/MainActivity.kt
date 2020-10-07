@@ -3,6 +3,7 @@ package com.wibisa.lffirestore
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -38,6 +39,11 @@ class MainActivity : AppCompatActivity() {
             val newPerson = getNewPersonMap()
             updatePerson(oldPerson, newPerson)
         }
+
+        btnDeletePerson.setOnClickListener {
+            val person = getOldPerson()
+            deletePerson(person)
+        }
     }
 
     private fun getOldPerson() : Person {
@@ -64,6 +70,36 @@ class MainActivity : AppCompatActivity() {
         return  map
     }
 
+    //delete person data sesuai dengan data person old
+    private fun deletePerson(person: Person) = CoroutineScope(Dispatchers.IO).launch {
+        val personQuery = personCollectionRef
+            .whereEqualTo("firstName", person.firstName)
+            .whereEqualTo("lastName", person.lastName)
+            .whereEqualTo("age", person.age)
+            .get()
+            .await()
+
+        if (personQuery.documents.isNotEmpty()) {
+            for (document in personQuery) {
+                try {
+                    personCollectionRef.document(document.id).delete().await() //delete document field
+//                    personCollectionRef.document(document.id).update(mapOf(
+//                        "firstName" to FieldValue.delete()
+//                    )) //delete sesuai field yang mau di delete
+                } catch (e: Exception) {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+        } else {
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@MainActivity, "No person matched the query", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    //update person data sesuai dengan data person old
     private fun updatePerson(person: Person, newPerson: Map<String, Any>) = CoroutineScope(Dispatchers.IO).launch {
         val personQuery = personCollectionRef
                 .whereEqualTo("firstName", person.firstName)
